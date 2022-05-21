@@ -1,5 +1,5 @@
 #!/bin/sh
-##setup command=wget https://raw.githubusercontent.com/emil237/plugins/main/ArabicSavior/installer.sh -O - | /bin/sh
+##setup command=wget https://raw.githubusercontent.com/emil237/ArabicSavior/main/installer.sh -O - | /bin/sh
 
 version=1.8
 
@@ -36,6 +36,7 @@ echo "#########################################################"
 sleep 3
 killall -9 enigma2
 exit 0
+
 
 
 
