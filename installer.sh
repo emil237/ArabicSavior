@@ -1,7 +1,7 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/emil237/ArabicSavior/main/installer.sh -O - | /bin/sh
 
-version=1.8
+version=1.9
 
 # remove old version
 if [ -f /var/lib/dpkg/status ]; then
@@ -36,6 +36,7 @@ echo "#########################################################"
 sleep 3
 killall -9 enigma2
 exit 0
+
 
 
 
