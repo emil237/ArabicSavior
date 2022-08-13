@@ -27,15 +27,14 @@ cd ..
 sync
 echo "#########################################################"
 echo "#      ArabicSavior INSTALLED SUCCESSFULLY              #"
-echo "#                 mfaraj57  &  RAED                     #"              
-echo "#                     support                           #"
-echo "#   https://www.tunisia-sat.com/forums/threads/3896466/ #"
+echo "#                 mfaraj57  &  RAED                     #"                       
 echo "#########################################################"
 echo "#           your Device will RESTART Now                #"
 echo "#########################################################"
 sleep 3
 killall -9 enigma2
 exit 0
+
 
 
 
