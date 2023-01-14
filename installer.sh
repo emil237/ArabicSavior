@@ -1,46 +1,6 @@
 #!/bin/sh
-##setup command=wget https://raw.githubusercontent.com/emil237/ArabicSavior/main/installer.sh -O - | /bin/sh
-
-version=1.9
-
-# remove old version
-if [ -f /var/lib/dpkg/status ]; then
-   apt-ger -r enigma2-plugin-extensions-arabicsavior
-else
-   opkg remove enigma2-plugin-extensions-arabicsavior
-fi
-
-cd /tmp
-rm -f *ArabicSavior*
-# Download new version
-wget "https://raw.githubusercontent.com/emil237/plugins/main/ArabicSavior-"$version".tar.gz"
-
-# remove old version
-rm -r /usr/lib/enigma2/python/Plugins/Extensions/ArabicSavior > /dev/null 2>&1
-
-# Install new version
-tar -xzf ArabicSavior-"$version".tar.gz -C /
-set +e
-rm -f *ArabicSavior*
-cd ..
-
-sync
-echo "#########################################################"
-echo "#      ArabicSavior INSTALLED SUCCESSFULLY              #"
-echo "#                 mfaraj57  &  RAED                     #"                       
-echo "#########################################################"
-echo "#           your Device will RESTART Now                #"
-echo "#########################################################"
-sleep 3
-killall -9 enigma2
-exit 0
-
-
-
-
-
-
-
+##
+echo "dmVyc2lvbj0xLjkKIyByZW1vdmUgb2xkIHZlcnNpb24gIwppZiBbIC1mIC92YXIvbGliL2Rwa2cvc3RhdHVzIF07IHRoZW4KICAgYXB0LWdlciAtciBlbmlnbWEyLXBsdWdpbi1leHRlbnNpb25zLWFyYWJpY3NhdmlvcgplbHNlCiAgIG9wa2cgcmVtb3ZlIGVuaWdtYTItcGx1Z2luLWV4dGVuc2lvbnMtYXJhYmljc2F2aW9yCmZpCgpjZCAvdG1wCnJtIC1mICpBcmFiaWNTYXZpb3IqCiMgRG93bmxvYWQgbmV3IHZlcnNpb24Kd2dldCAiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2VtaWwyMzcvcGx1Z2lucy9tYWluL0FyYWJpY1Nhdmlvci0iJHZlcnNpb24iLnRhci5neiIKCiMgcmVtb3ZlIG9sZCB2ZXJzaW9uCnJtIC1yIC91c3IvbGliL2VuaWdtYTIvcHl0aG9uL1BsdWdpbnMvRXh0ZW5zaW9ucy9BcmFiaWNTYXZpb3IgPiAvZGV2L251bGwgMj4mMQoKIyBJbnN0YWxsIG5ldyB2ZXJzaW9uCnRhciAteHpmIEFyYWJpY1Nhdmlvci0iJHZlcnNpb24iLnRhci5neiAtQyAvCnNldCArZQpybSAtZiAqQXJhYmljU2F2aW9yKgpjZCAuLgoKc3luYwplY2hvICIjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiCmVjaG8gIiMgICAgICBBcmFiaWNTYXZpb3IgSU5TVEFMTEVEIFNVQ0NFU1NGVUxMWSAgICAgICAgICAgICAgIyIKZWNobyAiIyAgICAgICAgICAgICAgICAgbWZhcmFqNTcgICYgIFJBRUQgICAgICAgICAgICAgICAgICAgICAjIiAgICAgICAgICAgICAgICAgICAgICAgCmVjaG8gIiMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyIKZWNobyAiIyAgICAgICAgICAgeW91ciBEZXZpY2Ugd2lsbCBSRVNUQVJUIE5vdyAgICAgICAgICAgICAgICAjIgplY2hvICIjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMiCnNsZWVwIDMKZXhpdCAwCg==" | base64 -d | sh
 
 
 
